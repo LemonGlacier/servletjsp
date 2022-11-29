@@ -16,12 +16,14 @@ import dto.Board;
 
 @WebServlet(name="exam01.BoardListController", urlPatterns="/exam01/BoardListController")
 public class BoardListController extends HttpServlet {
-	
+	/*
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println("BoardListController.init() 실행");
-	}
+	}*/
 	
+	//클라이언트가 요청할 때 마다 호출(콜백)(요청 방식(get/post)과는 상관 없다)
+	//역할: 요청 처리
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("BoardListController.service() 실행");
@@ -45,11 +47,11 @@ public class BoardListController extends HttpServlet {
 				request.getRequestDispatcher("/WEB-INF/views/exam01/boardList.jsp").forward(request, response);
 			
 	}
-	
+	/*
 	@Override
 	public void destroy() {
 		System.out.println("BoardListController.destroy() 실행");
 	}
-	
+	*/
 
 }
