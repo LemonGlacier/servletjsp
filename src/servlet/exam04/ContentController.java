@@ -19,7 +19,7 @@ public class ContentController extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("exam04.ContentController.doPost() 실행");
-		response.sendRedirect("/servletjsp/HomeController");
+		response.sendRedirect(request.getContextPath() + "/HomeController");
 		//request.getRequestDispatcher("/WEB-INF/views/exam04/content.jsp").forward(request, response);
 	}
 	
